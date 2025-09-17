@@ -1,0 +1,15 @@
+runtime: python311
+service: dev
+
+env_variables:
+  ENVIRONMENT: "dev"
+
+automatic_scaling:
+  min_instances: 0
+  max_instances: 2
+  target_cpu_utilization: 0.65
+
+handlers:
+- url: /.*
+  script: auto
+  secure: always

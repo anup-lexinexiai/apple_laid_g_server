@@ -1,0 +1,24 @@
+apple_laid_g_server/
+├── configs/
+│   ├── config.local.yaml      # Local environment config
+│   ├── config.dev.yaml        # Dev environment config
+│   ├── config.prod.yaml       # Production config
+│   └── config.example.yaml    # Template for developers
+├── app.yaml                   # App Engine prod
+├── app.dev.yaml              # App Engine dev
+├── requirements.txt
+├── main.py
+├── config.py                  # Config loader
+├── app/
+│   ├── __init__.py
+│   ├── create_app.py         # Flask app factory
+│   ├── api.py                # API endpoints
+│   └── auth.py               # Auth middleware
+├── services/
+│   ├── __init__.py
+│   ├── firestore_service.py  # Database operations
+│   ├── credit_service.py     # Credit management
+│   └── llm_service.py        # LLM handler
+└── models/
+    ├── __init__.py
+    └── llm_models.py         # LLM model classes

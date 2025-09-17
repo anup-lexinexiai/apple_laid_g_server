@@ -1,0 +1,138 @@
+environment: local
+debug: true
+
+# Firestore
+firestore:
+  project_id: "laid-dev"
+  database: "(default)"
+
+# Apple Sign In
+apple:
+  team_id: "TEST_TEAM"
+  client_id: "com.laid.dev"
+  key_id: "TEST_KEY"
+  private_key: |
+    -----BEGIN PRIVATE KEY-----
+    TEST_KEY_CONTENT
+    -----END PRIVATE KEY-----
+
+# App settings
+app:
+  free_credits: 100
+  reconcile_hours: 168
+
+# LLM Models Configuration
+llm_models:
+  llmgemini:
+    provider: "google"
+    api_key: "test-gemini-key"
+    model: "gemini-2.5-flash"
+    temperature: 0
+    max_tokens: 8000
+    cost: 0.83
+
+  llmgemini25pro:
+    provider: "google"
+    api_key: "test-gemini-key"
+    model: "gemini-2.5-pro"
+    temperature: 0
+    max_tokens: 8000
+    cost: 2.00
+
+  llmclaudehaiku35:
+    provider: "anthropic"
+    api_key: "test-claude-key"
+    model: "claude-3-5-haiku-20241022"
+    temperature: 0
+    max_tokens: 4000
+    cost: 1.33
+    reasoning_model: false
+
+  llmclaudesonnet37:
+    provider: "anthropic"
+    api_key: "test-claude-key"
+    model: "claude-sonnet-4-20250514"
+    temperature: 0
+    max_tokens: 8000
+    cost: 5.00
+    reasoning_model: false
+
+  llmthinkingclaudesonnet37:
+    provider: "anthropic"
+    api_key: "test-claude-key"
+    model: "claude-sonnet-4-20250514"
+    temperature: 1
+    max_tokens: 20000
+    cost: 6.67
+    reasoning_model: true
+
+  llmopenaigpt:
+    provider: "openai"
+    api_key: "test-openai-key"
+    model: "gpt-4o-mini"
+    temperature: 0
+    max_tokens: 4000
+    cost: 0.00
+    reasoning_model: false
+    web_search: true
+
+  llmopenaigpt4o:
+    provider: "openai"
+    api_key: "test-openai-key"
+    model: "gpt-4o"
+    temperature: 0
+    max_tokens: 4000
+    cost: 3.33
+    reasoning_model: false
+    web_search: true
+
+  llmopenaio1preview:
+    provider: "openai"
+    api_key: "test-openai-key"
+    model: "o1"
+    temperature: 0
+    max_tokens: 4000
+    cost: 20
+    reasoning_model: true
+    web_search: false
+
+  llmopenaio3mini:
+    provider: "openai"
+    api_key: "test-openai-key"
+    model: "o3-mini"
+    temperature: 0
+    max_tokens: 4000
+    cost: 1.47
+    reasoning_model: true
+    web_search: false
+
+  llmdeepseekv3:
+    provider: "deepseek"
+    api_key: "test-deepseek-key"
+    model: "deepseek-chat"
+    temperature: 0
+    max_tokens: 8000
+    cost: 0.37
+    reasoning_model: false
+
+  llmgrok3beta:
+    provider: "xai"
+    api_key: "test-grok-key"
+    model: "grok-3-latest"
+    temperature: 0
+    max_tokens: 12000
+    cost: 5.00
+    reasoning_model: false
+    web_search: true
+    vision: false
+
+  llmgrok4latest:
+    provider: "xai"
+    api_key: "test-grok-key"
+    model: "grok-4-latest"
+    temperature: 0
+    max_tokens: 12000
+    cost: 5.00
+    reasoning_model: false
+    web_search: true
+    vision: true
